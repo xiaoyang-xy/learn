@@ -39,8 +39,6 @@ func main() {
 				count.spacecount++
 			default:
 				count.othercount++
-				
-
 			}
 		}
 	}

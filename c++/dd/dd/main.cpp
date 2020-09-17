@@ -6,8 +6,11 @@
 //
 
 #include <iostream>
-
+using namespace std;
 int main(int argc, const char * argv[]) {
+    char *s;
+    char a[10];
+    cin.getline(a, 100);
     // insert code here...
     std::cout << "Hello, World!\n";
     return 0;

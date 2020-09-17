@@ -457,7 +457,7 @@ curl发出GET请求不带有任何参数时，curl 就是发出 GET 请求。
 > $ curl -H 'User-Agent: php/1.0' https://google.com
 > ```
 
-## **-b**
+## **-b*   *
 
 `-b`参数用来向服务器发送 Cookie。
 

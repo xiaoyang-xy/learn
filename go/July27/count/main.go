@@ -19,11 +19,16 @@ func main() {
 		fmt.Println("open file error=",err)
 		return
 	}
+	var s = "123"
+	fmt.Println(s[1])
 	var count CharCount
 	defer file.Close()
 	reader := bufio.NewReader(file)
-	for  {
+	for i:=0; i< 10 ;i++ {
 		str,err := reader.ReadString('\n')
+		if  != nil {
+
+		}
 		if err == io.EOF {
 			break
 		}

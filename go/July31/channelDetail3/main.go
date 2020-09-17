@@ -12,6 +12,15 @@ func sayHello()  {
 	}
 }
 
+func printHex(str string) string{
+	var a [20]byte
+	fmt.Printf("123");
+	a[1] = 0
+
+
+
+
+}
 func test()  {
 	defer func() {
 		if err := recover(); err != nil	{

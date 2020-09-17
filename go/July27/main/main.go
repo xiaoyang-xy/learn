@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"container/list"
 	"fmt"
 	"io"
 	"io/ioutil"
@@ -9,6 +10,19 @@ import (
 )
 
 func main()  {
+	var a list.List
+	a.PushBack("123")
+	b := a.Front()
+	p := &b.Value
+	*p = 10
+	fmt.Printf(len())
+	for  {
+		
+	}
+	var str111 string
+	fmt.Println(len(str111))
+	str111 += "123"
+	fmt.Print(a.Front().Value)
 	//os.Open return *File, error
 	file, err := os.Open("/Volumes/Data/coding/test.txt")
 	if err != nil {

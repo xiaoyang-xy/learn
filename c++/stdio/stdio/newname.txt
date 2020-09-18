@@ -1,0 +1,1 @@
+Name = woshinidie, num = 100, num16 = 64ddd

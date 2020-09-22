@@ -40,7 +40,7 @@ int main(int argc, const char * argv[]) {
     buffer[26] = '\0';
     puts(buffer);
     char str[] = "ddd";
-    //size_t fwrite(const void *restrict __ptr, size_t __size, size_t __nitems, FILE *restrict __stream)    return 
+    //size_t fwrite(const void *restrict __ptr, size_t __size, size_t __nitems, FILE *restrict __stream)    return
     fwrite(str, 1, sizeof(str) - 1, pFile);
     fclose(pFile);
     return 0;

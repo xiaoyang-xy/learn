@@ -4,12 +4,17 @@
 //
 //  Created by 晓洋 on 2020/9/21.
 //
+/*
+tcpdump -i any -s 0 -w
 
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <time.h>
 #include <string.h>
+#include <locale.h>
+#include <setjmp.h>
 int main(int argc, const char * argv[]) {
     // insert code here...
     double n, m;
@@ -79,10 +84,25 @@ int main(int argc, const char * argv[]) {
     FILE *pFile;
     pFile = fopen("mytest.txt", "r");
     if (!pFile) {
-        fputs("error open file", stderr);
+        fputs("error open file\n", stderr);
         //中断操作 void abort(void)
-        abort();
+        //abort();
     }
+    //int abs(int i) return the Absolute value of the number i
+    //div_t div(int, int)   return the div_t
+    div_t diverresult;
+    diverresult = div(38, 5);
+    printf("%d %d\n",diverresult.quot,diverresult.rem);
     fclose(pFile);
+    printf("%s\n",setlocale(LC_ALL, "C"));
+    jmp_buf env;
+    int val;
+    //设置捕获点 longjmp就会报错
+    val = setjmp(env);
+    printf("val is %d\n",val);
+    if (!val) {
+        longjmp(env, 1);
+    }
     return 0;
 }
+        
